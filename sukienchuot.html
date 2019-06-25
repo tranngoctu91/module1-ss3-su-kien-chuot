@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sukienchuot</title>
+</head>
+<body>
+<img src="ball.jpg" id="myimg">
+<p>Click button below to move image to the right</p><br>
+<button type="button" onclick="moveright()">Click me</button>
+<script>
+    let imgobj = null;
+    imgobj = document.getElementById("myimg");
+    function init() {
+        imgobj.style.position = 'relative';
+        imgobj.style.left = '0px';
+    }
+    function moveright() {
+        imgobj.style.left = parseInt(imgobj.style.left) + 10 +"px";
+    }
+    window.onload = init();
+
+</script>
+
+</body>
+</html>
